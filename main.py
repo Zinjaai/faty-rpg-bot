@@ -2,8 +2,9 @@ import discord
 from discord.ext import commands
 import logging
 import random
-import regex
+# import regex
 
+from secrets import DISCORD_BOT_TOKEN
 
 BotIntents = discord.Intents.default()
 BotIntents.message_content = True
