@@ -4,7 +4,7 @@ import logging
 import random
 # import regex
 
-from secrets import DISCORD_BOT_TOKEN
+from my_secrets import DISCORD_BOT_TOKEN
 
 BotIntents = discord.Intents.default()
 BotIntents.message_content = True
