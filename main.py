@@ -56,7 +56,7 @@ def parse_roll_command(user_input: str) -> tuple[str, int]:
     * /roll climbing
     * /roll acrobticts +2
     """
-    user_input = user_input.lower().strip("/roll ")
+    user_input = user_input.lower().removeprefix('/roll ').strip()
     words = user_input.split()
 
     if len(words) == 0:
