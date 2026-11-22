@@ -1,10 +1,13 @@
-import discord
-from discord.ext import commands
+import os
 import logging
 import random
-# import regex
 
-from my_secrets import DISCORD_BOT_TOKEN
+import discord
+from discord.ext import commands
+
+DISCORD_BOT_TOKEN = os.getenv('DISCORD_TOKEN')
+if not DISCORD_BOT_TOKEN:
+    raise ValueError("Environment variable DISCORD_TOKEN not set!")
 
 BotIntents = discord.Intents.default()
 BotIntents.message_content = True
